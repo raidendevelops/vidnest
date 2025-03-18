@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidNest</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./css/main/homepage/index.css" rel="stylesheet">
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script type="module" src="./js/main/homepage/index.js" defer></script>
+</head>
+<body>
+    <div class="sidebar">
+        <i class="material-icons" onclick="window.location.reload();">home</i>   
+        <i class="material-icons" onclick="window.location.search = '?filter=trending';">trending_up</i>   
+        <i class="material-icons" onclick="window.location.href = './upload.html';">upload</i>  
+        <i class="material-icons" onclick="window.location.href = './settings.html';">settings</i>  
+        <div onclick="window.location.href = './dashboard.html'" id="userProfile"></div>
+    </div>
+
+    <div class="content">
+        <div class="search-bar">
+            <input type="text" placeholder="Search" id="searchInput">
+            <i class="material-icons" onclick="">search</i>
+        </div>
+        <br>
+        <div id="signupBtn" class="signup-btn"></div>
+        <br><br>
+        <div id="videoList"></div>
+        <button onclick="signOutUser()">Sign Out</button>
+    </div>
+</body>
+</html>

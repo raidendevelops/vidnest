@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidNest - Video Player</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="./css/video/video.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main-content">
+        <!-- Video Player Container -->
+        <div class="video-container">
+            <div class="video-player-container">
+                <video id="videoPlayer" class="custom-video" src="" id="videoElement"></video>
+
+                <!-- Progress Bar -->
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-bar-inner" id="progressBarInner"></div>
+                    <div class="progress-bar-preview" id="progressBarPreview">
+                        <img id="previewImage" src="" alt="Preview">
+                    </div>
+                    <div class="progress-dot" id="progressDot"></div>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls">
+                    <!-- Play/Pause Button -->
+                    <button class="control-btn" id="playPauseBtn">
+                        <span class="material-icons">play_arrow</span>
+                    </button>
+
+                    <!-- Fullscreen Button -->
+                    <button class="control-btn" id="fullscreenBtn">
+                        <span class="material-icons">fullscreen</span>
+                    </button>
+
+                    <!-- Video Duration -->
+                    <span id="videoDuration">0:00 / 0:00</span>
+                </div>
+
+                <!-- Settings Gear Icon -->
+                <button class="control-btn" id="settingsBtn" style="position: absolute; bottom: 20px; right: 20px;">
+                    <span class="material-icons">settings</span>
+                </button>
+
+                <!-- Settings Menu -->
+                <div id="settingsMenu" class="settings-menu">
+                    <label for="playbackSpeed">Playback Speed:</label>
+                    <select id="playbackSpeed" class="settings-select">
+                        <option value="0.5">0.5x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+
+                    <label for="statsForNerds">Stats for Nerds:</label>
+                    <button id="statsForNerdsBtn">Show</button>
+
+                    <label for="captions">Captions:</label>
+                    <button id="captionsBtn">Enable</button>
+                </div>
+            </div>
+
+            <!-- Video Details Section -->
+            <div class="video-details">
+                <h3 id="videoTitle">video title</h3>
+                <p id="videoDescription">video description</p>
+
+                <div>
+                    <!-- Channel Name (Clickable) -->
+                    <a id="channelNameLink" href="#" style="color: white; text-decoration: none;">
+                        <img id="channelProfilePic" src="" alt="Channel Profile" style="width: 40px; border-radius: 50%; margin-right: 10px;">
+                        <span id="channelName" style="color: white; font-weight: bold;"></span>
+                    </a>
+                </div>
+
+                <!-- Like, Dislike, Subscribe Buttons -->
+                <div class="action-btns">
+                    <button id="likeBtn">👍 Like <span id="likeCount">0</span></button>
+                    <button id="dislikeBtn">👎 Dislike <span id="dislikeCount">0</span></button>
+                    <button id="subscribeBtn">🔔 Subscribe <span id="subCount">0</span></button>
+                    <button id="downloadBtn">Download</button>
+                </div>
+            </div>
+
+            <!-- Comment Form Section -->
+            <div class="comment-form-section">
+                <h3>Leave a Comment</h3>
+                <form id="commentForm">
+                    <textarea id="commentMessage" placeholder="Type your comment here..." required></textarea>
+                    <input type="text" id="commentCreatorName" placeholder="Your name" required>
+                    <input type="url" id="commentCreatorProfile" placeholder="Your profile picture URL" required>
+                    <button type="submit">Post Comment</button>
+                </form>
+            </div>
+
+            <!-- Comments Section -->
+            <div class="comments-section">
+                <h3>Comments</h3>
+                <div id="comments"></div>
+            </div>
+        </div>
+
+        <!-- Recommended Videos Section -->
+        <div class="recommended-videos" id="recommendedVideos"></div>
+    </div>
+
+    <script src="./js/video/video.js"></script>
+</body>
+</html>
