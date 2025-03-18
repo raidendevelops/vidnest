@@ -1,0 +1,27 @@
+
+User Account & Login Features:
+
+[ ] ⭐ Persistent Login: User stays logged in even after closing the site.
+[ ] ⭐ Account Management: User can manage their account on a separate page (./settings.html).
+[ ] ⭐ Google Login & Account Creation:
+[ ] Check if the user has an existing account when logging in with Google.
+[ ] If no account exists, create one using the API: https://vidnestapi.netlify.app/api/createUser, including name, email, and profile picture.
+
+Video Features:
+
+[ ] ⭐ Video Filters: Add filters like horror, music, etc.
+[ ] ⭐ Watch Later: Implement a "Watch Later" feature to save videos (on video.html).
+[ ] ⭐ Picture-in-Picture (PIP):
+[ ] Implement PIP mode, similar to YouTube.
+[ ] Use URL parameters like index.html?pip={videoid} to activate PIP.
+[ ] Have the PIP video appear on the bottom right of the screen.
+[ ] ⭐ Like/Dislike Counters: Make the like and dislike video counters functional.
+Channel and Upload Features:
+
+
+[ ] ⭐ Channel Customization: Allow users to customize their channels.
+[ ] ⭐ Upload Restrictions: Only allow users to upload videos to their own channels.
+
+Documentation:
+
+[ ] ⭐ API Documentation: Create clear documentation for your API.
